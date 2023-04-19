@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="msg://selectTaskScreen.caption">
+    <layout expand="comboVbox">
+        <comboBox id="taskcombobox" optionsEnum="com.company.testtask.entity.TaskTypeEnum"
+                  nullOptionVisible="false"/>
+        <vbox spacing="true" id="comboVbox" margin="true,false,false,false">
+            <hbox id="task1box" spacing="true">
+                <textArea id="a" caption="msg:///inputConditionTextField.caption"/>
+                <textArea id="b" caption="msg://b.caption"/>
+                <textArea id="outputConditionTextField" caption="msg://outputConditionTextField.caption" editable="false"/>
+            </hbox>
+
+            <hbox spacing="true" id="task2box" visible="false">
+                <gridLayout spacing="true">
+                    <columns count="9"/>
+                    <rows>
+                        <row>
+                            <textField width="50px" id="n1" datatype="int"/>
+                            <textField width="50px" id="n2" datatype="int"/>
+                            <textField width="50px" id="n3" datatype="int"/>
+                        </row>
+                        <row>
+                            <textField width="50px" id="n4" datatype="int"/>
+                            <textField width="50px" id="n5" datatype="int"/>
+                            <textField width="50px" id="n6" datatype="int"/>
+                        </row>
+                        <row>
+                            <textField width="50px" id="n7" datatype="int"/>
+                            <textField width="50px" id="n8" datatype="int"/>
+                            <textField width="50px" id="n9" datatype="int"/>
+                        </row>
+                    </rows>
+                </gridLayout>
+                <gridLayout spacing="true">
+                    <columns count="9"/>
+                    <rows>
+                        <row>
+                            <textField width="50px" id="an1" datatype="int" editable="false"/>
+                            <textField width="50px" id="an2" datatype="int" editable="false"/>
+                            <textField width="50px" id="an3" datatype="int" editable="false"/>
+                        </row>
+                        <row>
+                            <textField width="50px" id="an4" datatype="int" editable="false"/>
+                            <textField width="50px" id="an5" datatype="int" editable="false"/>
+                            <textField width="50px" id="an6" datatype="int" editable="false"/>
+                        </row>
+                        <row>
+                            <textField width="50px" id="an7" datatype="int" editable="false"/>
+                            <textField width="50px" id="an8" datatype="int" editable="false"/>
+                            <textField width="50px" id="an9" datatype="int" editable="false"/>
+                        </row>
+                    </rows>
+                </gridLayout>
+                <textField id="outputConditionTextArea2" caption="msg://outputConditionTextArea2.caption"
+                           editable="false" datatype="int" width="50px"/>
+            </hbox>
+        </vbox>
+        <buttonsPanel id="buttonsPanel"
+                      alwaysVisible="true">
+            <button id="calculateBtn" caption="msg://calculateBtn.caption"/>
+            <button id="saveBtn" caption="msg://saveBtn.caption"/>
+            <button id="exportBtn" caption="msg://exportBtn.caption"/>
+            <button id="loadBtn" caption="msg://loadBtn.caption"/>
+            <button id="importBtn" caption="msg://importBtn.caption"/>
+        </buttonsPanel>
+    </layout>
+</window>
