@@ -20,9 +20,6 @@ public class TestEntity {
     @NotNull
     private String conditionInput;
 
-    @Column(name = "CONDITION_OUTPUT")
-    private String conditionOutput;
-
     @NotNull
     @Column(name = "TASK_TYPE", nullable = false)
     private String taskType;
@@ -37,14 +34,6 @@ public class TestEntity {
 
     public TaskTypeEnum getTaskType() {
         return taskType == null ? null : TaskTypeEnum.fromId(taskType);
-    }
-
-    public void setConditionOutput(String conditionOutput) {
-        this.conditionOutput = conditionOutput;
-    }
-
-    public String getConditionOutput() {
-        return conditionOutput;
     }
 
     public String getConditionInput() {

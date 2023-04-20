@@ -46,15 +46,12 @@
             <columns>
                 <column id="conditionInput"/>
                 <column id="taskType"/>
-                <column id="conditionOutput"/>
             </columns>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
-                <button id="createBtn" action="testEntitiesTable.create"/>
-                <button id="editBtn" action="testEntitiesTable.edit"/>
-                <button id="removeBtn" action="testEntitiesTable.remove"/>
-                <comboBox id="taskcombobox" optionsEnum="com.company.testtask.entity.TaskTypeEnum"
-                          nullOptionVisible="false"/>
+                <button id="createBtn" action="testEntitiesTable.create" visible="false"/>
+                <button id="editBtn" action="testEntitiesTable.edit" visible="false"/>
+                <button id="removeBtn" action="testEntitiesTable.remove" visible="false"/>
             </buttonsPanel>
             <simplePagination/>
         </groupTable>

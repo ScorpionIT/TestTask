@@ -29,7 +29,6 @@
             <column width="350px">
                 <textField id="conditionInputField" property="conditionInput"/>
                 <textField id="taskTypeField" property="taskType"/>
-                <textField id="conditionOutputField" property="conditionOutput"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

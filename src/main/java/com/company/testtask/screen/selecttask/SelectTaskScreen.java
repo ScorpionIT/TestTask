@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Pair;
 
 import java.io.IOException;
-import java.util.List;
 
 @UiController("SelectTaskScreen")
 @UiDescriptor("select-task-screen.xml")
@@ -309,7 +308,7 @@ public class SelectTaskScreen extends Screen {
                             TestEntity testEntity = taskServiceBean.importTask(file);
                             fillFields(testEntity);
                             notifications.create(Notifications.NotificationType.TRAY)
-                                    .withCaption(messageBundle.getMessage("SavedSuccessfully"))
+                                    .withCaption(messageBundle.getMessage("Success"))
                                     .show();
                         } catch (IOException e) {
                             throw new RuntimeException("Cannot open file");

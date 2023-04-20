@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.11.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="1" author="testtask">
+        <createTable tableName="TEST_ENTITY">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_TEST_ENTITY"/>
+            </column>
+            <column name="CONDITION_INPUT" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TASK_TYPE" type="VARCHAR(255)">
+                <constraints nullable="false" validateNullable="true"/>
+            </column>
+            <column name="VERSION" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="testtask" context="!cuba">
+        <insert tableName="TEST_ENTITY" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="f1b700d3-cc34-4dc5-a165-0a634f44193d"/>
+            <column name="VERSION" value="1"/>
+            <column name="CONDITION_INPUT" value="1,2,3,4,5,6,7,8,9"/>
+            <column name="TASK_TYPE" value="TASK_2"/>
+        </insert>
+
+        <insert tableName="TEST_ENTITY" dbms="postgresql, mssql, hsqldb">
+            <column name="ID" value="0c133688-2170-4515-99cb-ba8e53818202"/>
+            <column name="VERSION" value="1"/>
+            <column name="CONDITION_INPUT" value="arp,live,strong;lively,alive,harp,sharp,armstrong"/>
+            <column name="TASK_TYPE" value="TASK_1"/>
+        </insert>
+    </changeSet>
+
+
+</databaseChangeLog>
