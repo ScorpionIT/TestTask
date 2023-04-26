@@ -216,12 +216,16 @@ public class SelectTaskScreen extends Screen {
 
     private void fillFields(TestEntity testEntity) {
         if (testEntity.getTaskType() == TaskTypeEnum.TASK_1) {
+            task1box.setVisible(true);
+            task2box.setVisible(false);
             String[] ab = testEntity.getConditionInput().split(";");
             taskcombobox.setValue(testEntity.getTaskType());
             a.setValue(ab[0]);
             b.setValue(ab[1]);
             calculate();
         } else {
+            task1box.setVisible(false);
+            task2box.setVisible(true);
             String[] numbers = testEntity.getConditionInput().split(",");
             taskcombobox.setValue(testEntity.getTaskType());
             n1.setValue(Integer.parseInt(numbers[0]));
