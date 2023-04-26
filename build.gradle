@@ -1,6 +1,7 @@
 plugins {
     id 'io.jmix' version '1.5.0'
     id 'java'
+    id 'war'
 }
 
 apply plugin: 'org.springframework.boot'
@@ -45,4 +46,12 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+tasks.withType(Jar) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    manifest {
+        attributes["Main-Class"] = "com.example.backendapp.BackendAppApplication"
+    }
 }

@@ -311,7 +311,7 @@ public class SelectTaskScreen extends Screen {
                                     .withCaption(messageBundle.getMessage("Success"))
                                     .show();
                         } catch (IOException e) {
-                            throw new RuntimeException("Cannot open file");
+                            throw new RuntimeException("No such file");
                         }
                     }
                 })
